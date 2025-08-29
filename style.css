@@ -1,0 +1,123 @@
+/* -------------------------
+   General Reset & Styling
+------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* -------------------------
+   Header & Navigation
+------------------------- */
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* -------------------------
+   Main Content
+------------------------- */
+.main-content {
+    padding: 2rem;
+}
+
+/* -------------------------
+   Grid Section
+   Demonstrates CSS Grid
+------------------------- */
+.grid-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.grid-item {
+    background-color: #f2f2f2;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+/* -------------------------
+   Flex Section
+   Demonstrates Flexbox
+------------------------- */
+.flex-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+.flex-item {
+    flex: 1 1 200px; /* Grow, shrink, basis */
+    background-color: #e7e7e7;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.flex-item:hover {
+    transform: scale(1.05);
+}
+
+/* -------------------------
+   Footer
+------------------------- */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* -------------------------
+   Responsive Media Queries
+------------------------- */
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .flex-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-section {
+        grid-template-columns: 1fr; /* Stack grid items on small screens */
+    }
+}
